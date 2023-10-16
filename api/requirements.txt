@@ -1,0 +1,13 @@
+argon2-cffi==21.3.0
+Flask==2.3.2
+Flask_Cors==3.0.10
+google_api_python_client==2.95.0
+openai==0.27.4
+protobuf==4.23.4
+pymssql==2.2.7
+pyairtable==2.0.0
+pyodbc==4.0.39
+fuzzywuzzy==0.18.0
+Levenshtein==0.21.1
+stripe==6.5.0
+Werkzeug==2.3.6
