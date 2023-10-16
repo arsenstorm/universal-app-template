@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { useSignIn, useSignUp } from "@clerk/clerk-expo";
 
 // Styles
 import { NativeWindStyleSheet } from 'nativewind';
@@ -8,7 +9,7 @@ NativeWindStyleSheet.setOutput({
     default: "native",
 });
 
-/*function SignInScreen() {
+function SignInScreen() {
     const { signIn, setActive, isLoaded } = useSignIn();
 
     const [emailAddress, setEmailAddress] = React.useState("");
@@ -172,16 +173,11 @@ function SignUpScreen() {
             )}
         </View>
     );
-}*/
+}
 
 const AuthScreenContext = createContext();
 
 function AuthScreen() {
-    return (
-        <>
-            This is deployed on Cloudflare
-        </>
-    );
     const [screen, setScreen] = useState('signin'); // 'signin' or 'signup'
 
     const toggleScreen = () => {
@@ -212,8 +208,6 @@ function AuthScreen() {
         </AuthScreenContext.Provider>
     );
 }
-
-// Original SignInScreen & SignUpScreen Components can stay the same.
 
 function useAuthScreen() {
     const context = useContext(AuthScreenContext);

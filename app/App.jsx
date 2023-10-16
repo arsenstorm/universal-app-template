@@ -6,7 +6,7 @@ import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-expo";
 import Constants from "expo-constants"
 
 // Auth
-import AuthScreen from "./components/auth/AuthScreen";
+import { AuthScreen, useAuthScreen } from "./components/auth/AuthScreen";
 
 // Navigation
 import NavigationBar from "./components/navigation/NavigationBar";
